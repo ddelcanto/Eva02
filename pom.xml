@@ -4,10 +4,10 @@
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
-  <artifactId>LoginWebApp</artifactId>
+  <artifactId>MyConstruccion</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>war</packaging>
-  <name>LoginWebApp</name>
+  <name>MyConstruccion</name>
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
@@ -26,12 +26,7 @@
     <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
     <version>2.0.0</version>
   </dependency>
-  <dependency>
-    <groupId>org.glassfish.web</groupId>
-    <artifactId>jakarta.servlet.jsp.jstl</artifactId>
-    <version>2.0.0</version>
-  </dependency>
-
+  
   <dependency>
     <groupId>mysql</groupId>
     <artifactId>mysql-connector-java</artifactId>
@@ -39,7 +34,14 @@
   </dependency>
 </dependencies>
 
-  <build>
-    <finalName>LoginWebApp</finalName>
-  </build>
+ <build>
+    <finalName>MyConstruccion</finalName>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-war-plugin</artifactId>
+            <version>3.4.0</version>
+        </plugin>
+    </plugins>
+</build>
 </project>
